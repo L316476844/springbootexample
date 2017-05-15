@@ -103,4 +103,10 @@
       sex = #{sex,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="queryPage" resultMap="BaseResultMap">
+    select
+       *
+    from user
+  </select>
 </mapper>

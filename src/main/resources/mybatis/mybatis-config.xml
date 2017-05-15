@@ -1,12 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "classpath:dtd/mybatis-3-config.dtd" >
 <configuration>
+
+
+	<settings>
+
+		<!-- 全局映射器启用缓存 -->
+		<setting name="cacheEnabled" value="false"/>
+
+		<!-- 查询时，关闭关联对象即时加载以提高性能 -->
+		<setting name="lazyLoadingEnabled" value="false"/>
+
+		<!-- 设置关联对象加载的形态，此处为按需加载字段(加载字段由SQL指 定)，不会加载关联表的所有字段，以提高性能 -->
+		<setting name="aggressiveLazyLoading" value="false"/>
+
+		<!-- 对于未知的SQL查询，允许返回不同的结果集以达到通用的效果 -->
+		<setting name="multipleResultSetsEnabled" value="true"/>
+
+		<!-- 允许使用列标签代替列名 -->
+		<setting name="useColumnLabel" value="true"/>
+
+		<!-- 允许使用自定义的主键值(比如由程序生成的UUID 32位编码作为键值)，数据表的PK生成策略将被覆盖 -->
+		<setting name="useGeneratedKeys" value="true"/>
+
+		<!-- 给予被嵌套的resultMap以字段-属性的映射支持 -->
+		<setting name="autoMappingBehavior" value="FULL"/>
+
+		<!-- 对于批量更新操作缓存SQL以提高性能 -->
+		<setting name="defaultExecutorType" value="SIMPLE"/>
+
+		<!-- 数据库超过25000秒仍未响应则超时 -->
+		<setting name="defaultStatementTimeout" value="25000"/>
+
+
+		<setting name="logImpl" value="LOG4J"/>
+
+	</settings>
+
+	<!-- 全局别名设置，在映射文件中只需写别名，而不必写出整个类路径 -->
 	<typeAliases>
-		<typeAlias alias="Integer" type="java.lang.Integer" />
-		<typeAlias alias="Long" type="java.lang.Long" />
-		<typeAlias alias="HashMap" type="java.util.HashMap" />
-		<typeAlias alias="LinkedHashMap" type="java.util.LinkedHashMap" />
-		<typeAlias alias="ArrayList" type="java.util.ArrayList" />
-		<typeAlias alias="LinkedList" type="java.util.LinkedList" />
+
+		<!-- 别名声明写这里 -->
 	</typeAliases>
+
+	<plugins>
+		<plugin interceptor="org.jon.lv.pagination.PagePlugin">
+			<property name="dialectClass" value="org.jon.lv.dialect.MysqlDialect"/>
+		</plugin>
+	</plugins>
+
+
 </configuration>

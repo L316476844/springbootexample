@@ -2,6 +2,7 @@ package org.jon.lv.service;
 
 import org.jon.lv.domain.User;
 import org.jon.lv.mapper.UserMapper;
+import org.jon.lv.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +27,12 @@ public class UserService {
 
     public User getUserById(Integer id){
         return userMapper.selectByPrimaryKey(id);
+    }
+
+
+    public Page<User> queryPage(Integer pageNumber, Integer pageSize){
+        Page<User> page = new Page<>(pageNumber, pageSize);
+        userMapper.queryPage(page);
+        return page;
     }
 }

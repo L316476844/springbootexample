@@ -2,7 +2,10 @@ package org.jon.lv.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.jon.lv.domain.User;
+import org.jon.lv.pagination.Page;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @Package: org.jon.lv.mapper.UserMapper.java
@@ -80,4 +83,6 @@ public interface UserMapper {
      * @throws []
      */
     int updateByPrimaryKey(User record);
+
+    List<User> queryPage(Page<User> page);
 }

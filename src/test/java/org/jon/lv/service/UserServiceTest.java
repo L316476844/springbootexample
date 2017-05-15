@@ -2,6 +2,7 @@ package org.jon.lv.service;
 
 import org.jon.lv.SpringbootexampleApplicationTests;
 import org.jon.lv.domain.User;
+import org.jon.lv.pagination.Page;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,6 +27,12 @@ public class UserServiceTest extends SpringbootexampleApplicationTests {
         userService.save(user);
 
         System.out.println(user);
+    }
+
+    @Test
+    public void testQueryPage(){
+        Page<User> page = userService.queryPage(1,2);
+        System.out.println(page);
     }
 
 }
