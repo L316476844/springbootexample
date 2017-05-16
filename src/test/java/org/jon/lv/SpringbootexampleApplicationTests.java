@@ -23,4 +23,10 @@ public class SpringbootexampleApplicationTests {
     public void setUp() throws Exception {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
+
+    @Test
+    public void contextLoads() {
+        System.out.println("hello world");
+    }
+
 }
