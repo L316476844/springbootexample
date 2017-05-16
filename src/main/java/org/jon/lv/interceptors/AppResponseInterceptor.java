@@ -51,13 +51,13 @@ public class AppResponseInterceptor implements ResponseBodyAdvice {
 
                 Method method = methodParameter.getMethod();
 
-                logger.debug("请求控制器:" + method.getDeclaringClass() + " 请求方法:" + method.getName());
+                logger.debug("request controller:" + method.getDeclaringClass() + " request method:" + method.getName());
 
-                logger.debug("请求链接:" + serverHttpRequest.getURI() + " 耗时（毫秒）:" + useTime);
+                logger.debug("request link:" + serverHttpRequest.getURI() + " times:" + useTime);
             }
 
 
-            logger.debug("响应内容:" + JSON.toJSONString(o));
+            logger.debug("response content:" + JSON.toJSONString(o));
         }
 
         return o;
