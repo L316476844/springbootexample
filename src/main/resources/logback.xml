@@ -197,6 +197,19 @@
         <appender-ref ref="CONSOLE" />
     </root>
 
+    <!-- 环境配置 -->
+ <!--   <springProfile name="test,dev">
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="org.springboot.sample" level="INFO" />
+        <logger name="com.kfit" level="info" />
+    </springProfile>-->
+    <!-- 生产环境. -->
+  <!--  <springProfile name="prod">
+        <logger name="org.springframework.web" level="ERROR"/>
+        <logger name="org.springboot.sample" level="ERROR" />
+        <logger name="com.kfit" level="ERROR" />
+    </springProfile>-->
+
     <!--日志异步到数据库 -->
     <!-- <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
         日志异步到数据库
@@ -210,4 +223,7 @@
             </dataSource>
         </connectionSource>
   </appender> -->
+
+    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+
 </configuration>
