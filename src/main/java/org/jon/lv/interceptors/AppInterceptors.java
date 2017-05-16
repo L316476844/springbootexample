@@ -7,6 +7,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 
 /**
  * @Package org.jon.lv.interceptors.AppInterceptors
@@ -18,11 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 public class AppInterceptors extends WebMvcConfigurerAdapter {
 
+    public static String REQUEST_TIME = "http_request_time";
+
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new HandlerInterceptorAdapter() {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                                      Object handler) throws Exception {
+                request.setAttribute(REQUEST_TIME, new Date());
                 System.out.println("interceptor====1111111111111");
                 return true;
             }
