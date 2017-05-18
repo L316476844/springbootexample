@@ -20,12 +20,21 @@ public class UserServiceTest extends SpringbootexampleApplicationTests {
     private UserService userService;
 
     @Test
-    public void testSave(){
-
+    public void testSaveDouble(){
         User user = new User();
-        user.setName("sahksdhk");
-        userService.save(user);
+        user.setHead("测试121212");
+        user.setName("hello world");
+        userService.saveDouble(user);
 
+        System.out.println(user);
+    }
+
+    @Test
+    public void testSave(){
+        User user = new User();
+        user.setHead("test world");
+        user.setName("test world");
+        userService.save(user);
         System.out.println(user);
     }
 
@@ -35,4 +44,9 @@ public class UserServiceTest extends SpringbootexampleApplicationTests {
         System.out.println(page);
     }
 
+    @Test
+    public void testGetOne(){
+        User user = userService.getUserById(82006);
+        System.out.println(user);
+    }
 }

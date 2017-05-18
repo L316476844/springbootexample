@@ -5,6 +5,7 @@ import org.jon.lv.mapper.UserMapper;
 import org.jon.lv.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Package org.jon.lv.service.UserService
@@ -19,11 +20,22 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+    @Transactional
+    public Integer saveDouble(User user){
+        userMapper.insert(user);
+        user.setId(null);
+        userMapper.insert(user);
+
+        return user.getId();
+    }
+
+
     public Integer save(User user){
         userMapper.insert(user);
 
         return user.getId();
     }
+
 
     public User getUserById(Integer id){
         return userMapper.selectByPrimaryKey(id);
