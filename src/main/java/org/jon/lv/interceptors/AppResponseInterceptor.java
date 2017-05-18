@@ -1,6 +1,7 @@
 package org.jon.lv.interceptors;
 
 import com.alibaba.fastjson.JSON;
+import org.jon.lv.result.ResultDO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
@@ -37,7 +38,8 @@ public class AppResponseInterceptor implements ResponseBodyAdvice {
                                   ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
         // 响应结果执行
         if(mediaType != null && o != null
-                && mediaType.includes(MediaType.APPLICATION_JSON)){
+                && mediaType.includes(MediaType.APPLICATION_JSON)
+                && o instanceof ResultDO){
 
             if(serverHttpRequest instanceof ServletServerHttpRequest){
 
