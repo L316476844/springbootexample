@@ -17,4 +17,6 @@ spring拦截器，
 Redis Session,
 redis缓存,
 xml注入spring boot无法扫描到的bean,
-actuator监控
+actuator监控,
+kafka消息队列,
+

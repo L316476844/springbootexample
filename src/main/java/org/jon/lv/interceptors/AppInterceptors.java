@@ -30,6 +30,6 @@ public class AppInterceptors extends WebMvcConfigurerAdapter {
                 System.out.println("interceptor====1111111111111");
                 return true;
             }
-        }).addPathPatterns("/user/**");
+        }).addPathPatterns("/user/**", "/kafka/**");
     }
 }
