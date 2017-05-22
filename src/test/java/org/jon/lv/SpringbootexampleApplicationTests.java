@@ -1,5 +1,7 @@
 package org.jon.lv;
 
+import com.alibaba.dubbo.config.ProtocolConfig;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,5 +30,4 @@ public class SpringbootexampleApplicationTests {
     public void contextLoads() {
         System.out.println("hello world");
     }
-
 }

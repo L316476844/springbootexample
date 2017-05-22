@@ -19,4 +19,6 @@ redis缓存,
 xml注入spring boot无法扫描到的bean,
 actuator监控,
 kafka消息队列,
-Swagger2配置
+Swagger2配置,
+dubbo注解方式,
+
