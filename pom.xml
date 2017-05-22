@@ -105,20 +105,16 @@
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 
+		<!-- Spring Boot Elasticsearch 依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.jon.lv</groupId>
 			<artifactId>mybatis-pageplugin</artifactId>
 			<version>1.0-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<groupId>log4j</groupId>
-					<artifactId>log4j</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -145,7 +141,7 @@
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
-		<!-- dubbo -->
+		<!-- dubbo netty与es冲突-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
@@ -154,14 +150,25 @@
 					<groupId>org.springframework</groupId>
 					<artifactId>spring</artifactId>
 				</exclusion>
+				<exclusion>
+					<artifactId>netty</artifactId>
+					<groupId>org.jboss.netty</groupId>
+				</exclusion>
 			</exclusions>
 			<version>${com.alibaba.dubbo.version}</version>
 		</dependency>
 
+		<!-- netty 与es冲突 -->
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 			<version>${org.apache.zookeeper.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>io.netty</groupId>
+					<artifactId>netty</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>

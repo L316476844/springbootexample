@@ -21,4 +21,6 @@ actuator监控,
 kafka消息队列,
 Swagger2配置,
 dubbo注解方式,
+elasticsearch搜索引擎,
+
 
