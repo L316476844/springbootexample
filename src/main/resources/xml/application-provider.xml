@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="serviceBean" class="org.jon.lv.dubbo.ServiceBean" abstract="true">
+        <property name="application" ref="dubboApplicationConfig"/>
+        <property name="registry" ref="dubboRegistryConfig"/>
+        <property name="protocol" ref="dubboProtocolConfig"/>
+        <property name="monitor" ref="monitorConfig"/>
+        <property name="version" value="${dubbo.provider.default.version}"/>
+        <property name="timeout" value="${dubbo.provider.timeout}"/>
+        <property name="retries" value="${dubbo.provider.retries}"/>
+    </bean>
+
+    <bean id="dubboDemoService" parent="serviceBean">
+        <property name="interface" value="org.jon.lv.dubbo.DubboDemoService"/>
+    </bean>
+
+    <bean id="dubboTestService" parent="serviceBean">
+        <property name="interface" value="org.jon.lv.dubbo.DubboTestService"/>
+    </bean>
+</beans>

@@ -10,6 +10,7 @@ package org.jon.lv.xml;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.stereotype.Component;
 
 /**
  * classpath路径：locations={"classpath:application-bean1.xml","classpath:application-bean2.xml"}
@@ -17,7 +18,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 
 @Configuration
-@ImportResource(locations={"classpath:xml/application-bean.xml"})
+@ImportResource(locations={"classpath:xml/application-*.xml"})
 public class ConfigClass {
     //配置无法扫描到的类
 }

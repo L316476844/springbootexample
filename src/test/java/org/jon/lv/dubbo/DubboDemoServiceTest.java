@@ -16,18 +16,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DubboDemoServiceTest extends SpringbootexampleApplicationTests {
-//
-//    @Autowired
-//    private DubboDemoService dubboDemoService;
-//
-//    @Autowired
-//    private DubboTestService dubboTestService;
-//
-//    @Test
-//    public void say() throws InterruptedException {
-//        dubboDemoService.say("sdhksdkjs四大皆空手机登录速度快");
-//        System.out.println("--------------------------------------------");
-//        dubboTestService.say("圣诞节快乐速度肯定是副科级");
-//        System.out.println("--------------------------------------------");
-//    }
+
+    @Autowired
+    private DubboDemoService dubboDemoService;
+
+    @Autowired
+    private DubboTestService dubboTestService;
+
+    @Test
+    public void say() throws InterruptedException {
+        dubboDemoService.say("sdhksdkjs四大皆空手机登录速度快");
+        System.out.println("--------------------------------------------");
+        dubboTestService.say("圣诞节快乐速度肯定是副科级");
+        System.out.println("--------------------------------------------");
+    }
 }
