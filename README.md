@@ -1,5 +1,8 @@
 # springbootexample项目
-此工程是对springboot框架学习以及结合其他框架使用的例子。
+此工程是对springboot框架学习以及结合其他框架使用的例子。<br>
+分页插件依赖另外一个项目:https://github.com/L316476844/mybatis-pageplugin <br>
+动态数据源依赖于项目：https://github.com/L316476844/Mybatis-DynamicDataSource 分支 release_05_18 <br>
+
 + springboot例子
 + 包含druid数据源
 + druid的sql监控
