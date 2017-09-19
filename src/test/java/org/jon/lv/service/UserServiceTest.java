@@ -32,8 +32,8 @@ public class UserServiceTest extends SpringbootexampleApplicationTests {
     @Test
     public void testSave(){
         User user = new User();
-        user.setHead("test world");
-        user.setName("test world");
+        user.setHead("dev world");
+        user.setName("dev world");
         userService.save(user);
         System.out.println(user);
     }

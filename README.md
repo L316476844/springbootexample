@@ -11,6 +11,8 @@
 + druid过滤
 + mybatis xml配置
 + mybatis分页插件
++ mybatis动态数据源插件
++ mybatis完整sql(不包含?)输出插件
 + logback日志配置
 + springboot多环境配置
 + 发送邮件

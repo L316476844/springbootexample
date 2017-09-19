@@ -48,6 +48,7 @@
 		<plugin interceptor="org.jon.lv.pagination.PagePlugin">
 			<property name="dialectClass" value="org.jon.lv.dialect.MysqlDialect"/>
 		</plugin>
+		<plugin interceptor="org.jon.lv.spy.SqlCostInterceptor"/>
 	</plugins>
 
 </configuration>
