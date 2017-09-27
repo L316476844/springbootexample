@@ -22,8 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.7</java.version>
-		<com.alibaba.dubbo.version>2.5.3</com.alibaba.dubbo.version>
-		<org.apache.zookeeper.version>3.4.6</org.apache.zookeeper.version>
+		<com.alibaba.dubbo.version>2.5.5</com.alibaba.dubbo.version>
+		<org.apache.zookeeper.version>3.4.9</org.apache.zookeeper.version>
 		<com.github.sgroschupf.zkclient.version>0.1</com.github.sgroschupf.zkclient.version>
 	</properties>
 
