@@ -30,7 +30,8 @@
 + actuator监控
 + kafka消息队列
 + Swagger2配置
-+ dubbo注解方式
++ dubbo注解方式 dubbo版本2.5.5
++ dubboxml配置方式-分支：dubbo_xml_config
 + elasticsearch搜索引擎
 
 
