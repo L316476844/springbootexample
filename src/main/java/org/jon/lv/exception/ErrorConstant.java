@@ -27,7 +27,8 @@ public enum ErrorConstant {
     ERROR_MEDIA_TYPE(1007, "[服务器]Content-type错误，请使用application/json"),
     EMPTY_REQUEST_BOYD(1008, "[服务器]request请求body不能为空"),
     ERROR_REQUEST_BOYD(1009, "[服务器]request请求body非json对象"),
-    ERROR_VERSION(2000, "[服务器]版本号错误");
+    ERROR_VERSION(2000, "[服务器]版本号错误"),
+    ERROR_FORMAT_PARAMETER(2001, "[服务器]参数格式错误");
 
 
 
