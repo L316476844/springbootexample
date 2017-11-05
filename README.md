@@ -33,5 +33,7 @@
 + dubbo注解方式 dubbo版本2.5.5
 + dubboxml配置方式-分支：dubbo_xml_config
 + elasticsearch搜索引擎
++ 解决ajax跨域 CorsFilter
++ HTTP请求监听事件
 
 

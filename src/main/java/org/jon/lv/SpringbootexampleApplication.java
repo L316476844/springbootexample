@@ -12,6 +12,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 import javax.servlet.Filter;
@@ -54,6 +55,12 @@ public class SpringbootexampleApplication{
 	public HttpMessageConverters restFileDownloadSupport() {
 		ByteArrayHttpMessageConverter arrayHttpMessageConverter = new ByteArrayHttpMessageConverter();
 		return new HttpMessageConverters(arrayHttpMessageConverter);
+	}
+
+    // HTTP请求监听事件
+	@Bean
+	public RequestContextListener requestContextListener() {
+		return new RequestContextListener();
 	}
 
 	public static void main(String[] args) {

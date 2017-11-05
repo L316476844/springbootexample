@@ -26,7 +26,6 @@ import java.util.List;
 /**
  * @Package org.jon.lv.conf.DruidDataSourceConfiguration
  * @Description: DruidDataSourceConfiguration
- * @Company:上海房产
  * @Copyright: Copyright (c) 2016
  * Author lv bin
  * @date 2017/5/12 15:15
