@@ -35,5 +35,5 @@
 + elasticsearch搜索引擎
 + 解决ajax跨域 CorsFilter
 + HTTP请求监听事件
-
++ Spring boot 开启reponse压缩 
 
