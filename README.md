@@ -30,10 +30,10 @@
 + actuator监控
 + kafka消息队列
 + Swagger2配置
++ Swagger2 所有api请求头header添加X-Token令牌 X-Timestamp 时间戳 X-Sign 签名信息
 + dubbo注解方式 dubbo版本2.5.5
 + dubboxml配置方式-分支：dubbo_xml_config
 + elasticsearch搜索引擎
 + 解决ajax跨域 CorsFilter
 + HTTP请求监听事件
 + Spring boot 开启reponse压缩 
-
