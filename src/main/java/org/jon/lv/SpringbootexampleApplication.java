@@ -67,7 +67,7 @@ public class SpringbootexampleApplication{
      * 跨域过滤器
      * @return
      */
-    @Bean
+    //@Bean
     //  public FilterRegistrationBean corsFilter() {
      //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
       //    CorsConfiguration config = new CorsConfiguration();
