@@ -63,6 +63,25 @@ public class SpringbootexampleApplication{
 		return new RequestContextListener();
 	}
 
+	 /**
+     * 跨域过滤器
+     * @return
+     */
+    @Bean
+    //  public FilterRegistrationBean corsFilter() {
+     //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+      //    CorsConfiguration config = new CorsConfiguration();
+       //   config.addAllowedOrigin("*");
+       //   config.setAllowCredentials(true);
+       //   config.addAllowedHeader("*");
+       //   config.addAllowedMethod("*");
+        //  source.registerCorsConfiguration("/**", config);
+
+        //  FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+        //  bean.setOrder(0);
+        //  return bean;
+    //  }
+	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootexampleApplication.class, args);
 	}
