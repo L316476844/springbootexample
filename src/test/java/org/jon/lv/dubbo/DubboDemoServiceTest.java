@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 /**
  * @Package org.jon.lv.dubbo.DubboDemoServiceTest
  * @Description: DubboDemoServiceTest
- * @Company:上海房产
  * @Copyright: Copyright (c) 2016
  * Author lv bin
  * @date 2017/5/22 8:48
