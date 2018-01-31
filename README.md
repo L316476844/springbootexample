@@ -6,6 +6,8 @@
 **QQ交流群：374044564添加QQ群获取springboot、springcloud、dubbo等视频教程及资料**
 
 + springboot例子
++ springboot 自动装载功能和注解方式实现自动装载例子。https://github.com/L316476844/boot-custom-autoconfiguration
++ springboot 自定义注解完成版本号校、登录校验、接口权限校验、接口参数签名校验.https://github.com/L316476844/boot-stream
 + 包含druid数据源
 + druid的sql监控
 + druid过滤
